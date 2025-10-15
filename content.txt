@@ -1,0 +1,16 @@
+The plus sign (+) in Linux regular expressions is used to match one or more occurrences of the preceding character or group. It differs from the asterisk (
+∗
+∗), which matches zero or more occurrences.​
+
+For example, with the grep command using extended regular expressions (
+−
+E
+−E):
+
+text
+grep -E "ap+le" file.txt
+This will match lines containing "ale", "aple", "apple", "appple", "appppple", and so on—any sequence where "a" is followed by one or more "p"s and then "le".​
+
+Usage Note
+
+When using grep with "+", always use the -E option for extended regular expressions; otherwise, grep will treat the plus sign as a literal character.​
